@@ -37,23 +37,20 @@ This guide will help you host your HTML portfolio with a free domain!
 
 ## Option 2: Free Domain Providers + GitHub Pages
 
-### A. Freenom (Free domains for 1 year)
-**Domains:** `.tk`, `.ml`, `.ga`, `.cf`, `.gq`
+### A. Freenom (Free domains) - ⚠️ UPDATE: Service Discontinued
+**Status:** Freenom has discontinued free domain registrations as of 2023.
 
-**Steps:**
-1. Visit [freenom.com](https://www.freenom.com)
-2. Search for your desired domain name
-3. Register (may require verification)
-4. After registration, point the domain to GitHub Pages:
-   - Add A records pointing to GitHub's IPs:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - Add CNAME record: `www` → `ansh200618.github.io`
-5. In your GitHub repo, create a file named `CNAME` with your domain name
+**Alternative Free Domain Options:**
+- Use `.is-a.dev` subdomain (for developers) - [is-a-dev](https://www.is-a.dev/)
+- Use `.js.org` subdomain (for JavaScript projects) - [js.org](https://js.org/)
+- Use hosting provider subdomains (see below)
+- GitHub Pages `.github.io` domain (instant and reliable)
 
-**Note:** Freenom domains need to be renewed annually (still free)
+**For custom free domains, consider:**
+1. GitHub Pages with `.github.io` subdomain (recommended)
+2. Netlify's `.netlify.app` subdomain
+3. Vercel's `.vercel.app` subdomain
+4. Student Developer Pack for real domains (if eligible)
 
 ### B. InfinityFree + Free Subdomain
 **Domain:** `yourname.infinityfreeapp.com` or similar
@@ -185,10 +182,10 @@ This guide will help you host your HTML portfolio with a free domain!
 
 | Platform | Domain Type | Cost | Setup Time | Best For |
 |----------|-------------|------|------------|----------|
-| GitHub Pages | `.github.io` | FREE | 5 min | Quick start |
-| Freenom | `.tk/.ml/.ga/.cf/.gq` | FREE | 30 min | Custom domain |
+| GitHub Pages | `.github.io` | FREE | 5 min | Quick start (recommended) |
 | Netlify | `.netlify.app` | FREE | 10 min | Easy deployment |
 | Vercel | `.vercel.app` | FREE | 10 min | Modern hosting |
+| Cloudflare Pages | `.pages.dev` | FREE | 10 min | Performance |
 | InfinityFree | Subdomain | FREE | 20 min | Full hosting control |
 | Student Pack | Real domain (`.me`) | FREE (1 yr) | 1 hour | Students only |
 
@@ -250,7 +247,7 @@ https://ansh200618.github.io/About-Me/
 
 **For immediate results:** Use GitHub Pages (5 minutes, free `.github.io` domain)
 
-**For custom domain:** Add Freenom domain to GitHub Pages (30 minutes total)
+**For custom domain:** Use GitHub Student Pack or hosting provider subdomains (10-30 minutes total)
 
 **For best experience:** Netlify or Vercel with optional custom domain
 
