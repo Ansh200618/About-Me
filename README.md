@@ -1,5 +1,31 @@
-# 💫 About Me:
+# 💫 About Me - Portfolio Website
+
+This repository contains my personal portfolio website built with HTML, CSS, and JavaScript.
+
+## 🌐 Live Portfolio
+Visit my portfolio at: [https://ansh200618.github.io/About-Me/](https://ansh200618.github.io/About-Me/)
+
+## 🚀 About Me
 I'm Currently Working on C Learning<br>I am looking for Collaborate on Operating System<br>
+
+## 📱 Portfolio Features
+- Responsive design that works on all devices
+- Modern and clean UI with dark theme
+- Animated sections and smooth scrolling
+- Social media integration
+- GitHub statistics display
+- Contact section
+
+## 🆓 Want to deploy your own portfolio with a free domain?
+Check out the comprehensive guide: **[FREE_DOMAIN_GUIDE.md](FREE_DOMAIN_GUIDE.md)**
+
+This guide covers:
+- GitHub Pages setup (easiest method)
+- Free domain providers (Freenom, etc.)
+- Netlify and Vercel deployment
+- Student domain options
+- Custom domain configuration
+- Step-by-step instructions for beginners
 
 
 ## 🌐 Socials:
