@@ -1257,7 +1257,7 @@
               </div>
             </div>
             <h3 class="project-name">${formatRepoName(repo.name)}</h3>
-            <p class="project-description">${repo.description || 'No description provided.'}</p>
+            <p class="project-description">${escapeHtml(repo.description || 'No description provided.')}</p>
             <div class="project-meta">
               ${repo.language ? `
                 <span class="project-lang">
@@ -1283,7 +1283,14 @@
 
     /* ===== Format repo name ===== */
     function formatRepoName(name) {
-      return name.replace(/-/g, ' ');
+      return escapeHtml(name).replace(/-/g, ' ');
+    }
+
+    /* ===== Escape HTML to prevent XSS ===== */
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.appendChild(document.createTextNode(text));
+      return div.innerHTML;
     }
 
     /* ===== Open project modal and show README content ===== */
