@@ -1,7 +1,5 @@
 # 💫 Anshdeep Singh — Developer & Creator
 
-> **[🌐 View My Portfolio Website](https://ansh200618.github.io/About-Me/)**
-
 I'm a passionate developer currently diving deep into **C programming** and **Operating Systems**. I love building projects that solve real problems — from management systems to interactive web apps.
 
 ---
