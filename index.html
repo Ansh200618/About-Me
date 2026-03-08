@@ -925,7 +925,7 @@
       <li><a href="#stats">Stats</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </nav>
 
   <!-- Hero Section -->
@@ -1154,6 +1154,7 @@
     /* ===== Configuration ===== */
     const GITHUB_USERNAME = 'Ansh200618';
     const GITHUB_API = 'https://api.github.com';
+    const CURRENT_REPO = 'About-Me';
 
     /* ===== Language color map ===== */
     const LANG_COLORS = {
@@ -1193,7 +1194,8 @@
     });
 
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
     });
 
     /* Close mobile nav on link click */
@@ -1229,7 +1231,7 @@
         const repos = await res.json();
 
         /* Filter out forks and the About-Me repo itself */
-        const publicRepos = repos.filter(r => !r.fork && !r.private && r.name !== 'About-Me');
+        const publicRepos = repos.filter(r => !r.fork && !r.private && r.name !== CURRENT_REPO);
 
         /* Update stats */
         document.getElementById('repoCount').textContent = publicRepos.length;
@@ -1245,7 +1247,8 @@
 
         grid.innerHTML = publicRepos.map(repo => `
           <div class="project-card reveal" onclick="openProject('${repo.name}')" tabindex="0"
-               role="button" aria-label="View ${repo.name} details">
+               role="button" aria-label="View ${repo.name} details"
+               onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject('${repo.name}');}"
             <div class="project-header">
               <div class="project-icon">${PROJECT_ICONS[repo.name] || '📦'}</div>
               <div class="project-links">
@@ -1314,7 +1317,7 @@
         if (repoData.language) tags.push(repoData.language);
         if (repoData.stargazers_count > 0) tags.push(`⭐ ${repoData.stargazers_count} stars`);
         if (repoData.forks_count > 0) tags.push(`🍴 ${repoData.forks_count} forks`);
-        tags.push(`Updated ${new Date(repoData.updated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}`);
+        tags.push(`Updated ${new Date(repoData.updated_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}`);
 
         meta.innerHTML = tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
 
